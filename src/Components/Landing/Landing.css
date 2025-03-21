@@ -1,0 +1,34 @@
+#landing{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    background-image: url(https://images.pexels.com/photos/1525039/pexels-photo-1525039.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+h1{
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   text-shadow: 1px 1px 1px black;
+}
+
+#anchor{
+    color: gold;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+#anchor-box{
+    margin-top: 4px;
+    border: 2px solid gold;
+    border-radius: 4px;
+    padding: 5px 5px;
+}

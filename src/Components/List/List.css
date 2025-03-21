@@ -1,0 +1,17 @@
+#list-div{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px; 
+    width: 80%;
+    height: 100%;
+    margin-top: 100vh;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: rgb(1, 57, 1);
+}
+
+@media (max-width: 390px) {
+    #list-div{
+        flex-direction: column;
+    }
+}

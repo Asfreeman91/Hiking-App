@@ -1,0 +1,52 @@
+#hike-card{
+  flex: 1 1 100%;
+  max-width: 50%;
+  overflow: hidden;
+  padding: 10px 10px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+@media (max-width: 390px) {
+  #hike-card{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    min-width: 100px;
+    padding: 0;
+    text-align: center;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hike-card{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    min-width: 100px;
+    padding: 0;
+    text-align: center;
+    font-size: 8px;
+  }
+}
+
+
+
+
+
