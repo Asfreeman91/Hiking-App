@@ -1,12 +1,23 @@
 import HikeCard from "../HikeCard/HikeCard";
 import "./List.css"
-import { hikes } from "../../data";
+import { Hike } from "../../Type";
 
-export default function List() {   {/* each element in hikes array is mapped and used as a prop for HikeCard by using hike id as a key */}
+type ListProps = {
+cards: Hike[];
+deleteCard: (id: number) => void
+updateCard: (id: number, updatedCard: Partial<Hike>) => void
+}
+
+{/* deleteCard and updateCard are passed into List as props and then passed down to HikeCard */}
+export default function List({ cards, deleteCard, updateCard }: ListProps) {   {/* each element in hikes array is mapped and used as a prop for HikeCard by using hike id as a key */}
     return (  
         <div id="list-div"> 
-        {hikes.map((hike) => ( 
-         <HikeCard key={hike.id} hike={hike}/>    
+        {cards.map((hike) => ( 
+         <HikeCard 
+         deleteCard={deleteCard} 
+         updateCard={updateCard}
+         key={hike.id} 
+         hike={hike}/>    
         ))}
         </div> 
         

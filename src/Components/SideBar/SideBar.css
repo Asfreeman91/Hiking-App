@@ -54,3 +54,17 @@ background-color: rgb(17, 17, 213);
 label{
     text-shadow: 1px 1px 1px white;
 }
+
+side-bar-button{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+span{
+  display: flex;
+  position: sticky;
+  top: 0;
+  flex-direction: column;
+  font-weight: bold;
+}
