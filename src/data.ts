@@ -4,7 +4,7 @@ import { Hike } from "./Type";
 export const hikes : Hike[] = [  
 
     {
-        id: 1,
+        id: "1",
         name: "Little Wild Horse Canyon",
         location: "Grand Teton National Park",
         miles: "8",
@@ -13,7 +13,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 2,
+        id: "2",
         name: "South Fork Cascade Canyon",
         location: "Southern Utah",
         miles: "9",
@@ -22,7 +22,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 3,
+        id: "3",
         name: "Death Canyon Shelf",
         location: "Grand Teton National Park",
         miles: "12",
@@ -31,7 +31,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 4, 
+        id: "4", 
         name: "Zion Narrows",
         location: "Zion National Park",
         miles: "6",
@@ -40,7 +40,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 5,
+        id: "5",
         name: "Angels Landing",
         location: "Zion National Park",
         miles: "7",
@@ -49,7 +49,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 6,
+        id: "6",
         name: "Yellow Stone Lake Back-Country Hike",
         location: "Yellow Stone National Park",
         miles: "6",
@@ -58,7 +58,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 7,
+        id: "7",
         name: "Lone Star Geyser Camp",
         location: "Yellowstone National Park",
         miles: "2.71",
@@ -67,7 +67,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 8,
+        id: "8",
         name: "Upper Palisades Lake",
         location: "Swan Valley Idaho",
         miles: "7",
@@ -76,7 +76,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 9,
+        id: "9",
         name: "Table Mountain",
         location: "Wyoming (near Alta Wyoming)",
         miles: "13",
@@ -85,7 +85,7 @@ export const hikes : Hike[] = [
     },
 
     {
-        id: 10,
+        id: "10",
         name: "Trapper Lake",
         location: "Grand Teton National Park",
         miles: "4.5",
