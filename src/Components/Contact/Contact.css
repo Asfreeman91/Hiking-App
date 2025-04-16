@@ -1,0 +1,74 @@
+#contact-1{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#contact-2{
+    display: flex;
+    height: 92vh;
+    width: 92%;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1469212044023-0e55b4b9745a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGlnaCUyMG1vdW50YWlufGVufDB8fDB8fHww");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -90px;
+    z-index: 1;
+}
+
+#contact-header-div{
+    background-color: rgba(17, 62, 94, 0.5);
+    box-shadow: 1px 1px 2px black;
+    z-index: 999;
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    z-index: 9999;   
+}
+
+#contact-header{
+    color: rgb(0, 0, 0);
+    display: flex;
+    text-shadow: 3px 3px 2px rgb(219, 219, 219);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@media (max-height: 844px) {
+    #contact-header-div{
+      margin-top: 250px;
+      margin-bottom: -55px;
+      
+    }
+    #contact-header{
+       font-size: 30px; 
+    }
+}
+
+@media (max-width: 390px) {
+    #contact-header-div{
+       margin-top: 250px;
+       
+    }
+    #contact-header{
+      font-size: 30px;  
+    }
+}

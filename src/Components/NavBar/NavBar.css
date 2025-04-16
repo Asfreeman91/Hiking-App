@@ -1,0 +1,24 @@
+#navbar{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+background-color: rgb(1, 57, 52);
+z-index: 1000;
+}
+
+#navbar-brand{
+    font-style: italic;
+    padding-right: 20px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    padding: 0 15px 0 15px;
+}
+
+.link:hover{
+    color: gold;
+}
+
+.active{
+    color: gold;
+  }

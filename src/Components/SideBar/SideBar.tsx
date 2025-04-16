@@ -1,18 +1,42 @@
-import { useState } from "react"
 import "./SideBar.css"
 import { NewHike } from "../../Type";
+import { useEffect, useState } from "react";
+import { API_URL } from "../../API";
+import type { SideBarProps } from "../../Type";
 
-{/*handleAddCard will be passed into form button to create hikes */}
-type SideBarProps = {  
-    handleAddCard: (hike: NewHike) => void  
-}
+export default function SideBar( { setCards, cards }: SideBarProps) { 
+    const [sideBarVisible, setSideBarVisible] = useState(true); {/* state variable for collapsable sidebar defaulted to visible */
 
-export default function SideBar({ handleAddCard }: SideBarProps) { {/* accepting handleAddCard function as a prop; passed into create hike button as prop */}
+    useEffect(() => {
+        const asyncFunction = async () => {
+        const response = await fetch("https://67f56264913986b16fa4640a.mockapi.io/hikes")
+        const data = await response.json()
+        setCards(data);
+        }
+        asyncFunction()
+        }, [])
 
-    const [sideBarVisible, setSideBarVisible] = useState(true); {/* state variable for collapsable sidebar defaulted to visible */}
-    
+    const addNewCard = async (newHike: NewHike) => {
+        try{
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            'content-type':'application/json',
+          },
+          body: JSON.stringify(newHike),
+        });
+        if(!response.ok) {
+            throw new Error("Network response was not ok.");
+        }
+        const data = await response.json();
+        setCards( [...cards, data] ); {/* The cards are set and the new data is added */}
+      } catch(error) {
+        console.error("There was an error creating a hike:", error);
+      }
+      }
+
     {/*State variable that controlls how form info is set. The form is defaulted to blank */}
-    const [formInfo, setFormInfo] = useState<Partial<NewHike>>({
+    const [formInfo, setFormInfo] = useState<Partial<NewHike>>({ 
         name: '',
         location: '',
         miles: '',
@@ -32,18 +56,18 @@ export default function SideBar({ handleAddCard }: SideBarProps) { {/* accepting
         event.preventDefault();
     };
 
-    const newHike: NewHike = {
+    const handleButtonClick = () => {  {/* function that toggles visibility of sidebar back and forth */}
+        setSideBarVisible(!sideBarVisible)
+    };
+
+     const newHike: NewHike = {
         name: formInfo.name ?? '',
         location: formInfo.location ?? '',
         miles: formInfo.miles ?? '',
         imageUrl: formInfo.imageUrl ?? '',
         favorite: false
     };
-    
-    const handleButtonClick = () => {  {/* function that toggles visibility of sidebar back and forth */}
-        setSideBarVisible(!sideBarVisible)
-    };
-    
+
     return (
         <>
         {sideBarVisible ? (
@@ -74,7 +98,7 @@ export default function SideBar({ handleAddCard }: SideBarProps) { {/* accepting
     </form>
     <button type="submit" 
     onClick={() => {
-    handleAddCard(newHike);  {/* A new card is created upon clicking the "Create Hike" button and the form is refreshed */}
+    addNewCard(newHike);  {/* A new card is created upon clicking the "Create Hike" button and the form is refreshed */}
     setFormInfo({
         name: '',
         location: '',
@@ -94,4 +118,5 @@ export default function SideBar({ handleAddCard }: SideBarProps) { {/* accepting
     onClick={handleButtonClick}><span>{ sideBarVisible ? "<" : ">" }</span></button> {/* handleButtonClick passed in as prop to sidebar button */}
     </>
     )
+}
 }

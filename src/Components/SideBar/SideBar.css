@@ -55,10 +55,8 @@ label{
     text-shadow: 1px 1px 1px white;
 }
 
-side-bar-button{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+#side-bar-button:hover{
+    background-color: gold;
 }
 
 span{

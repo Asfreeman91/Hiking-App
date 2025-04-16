@@ -1,0 +1,1 @@
+export const API_URL = "https://67f56264913986b16fa4640a.mockapi.io/hikes"
