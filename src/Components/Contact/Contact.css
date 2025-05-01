@@ -68,12 +68,12 @@
 
 @media (max-height: 844px) {
     #contact-header-div{
-      margin-top: 250px;
-      margin-bottom: -55px;
+     display: none;
       
     }
     #contact-header{
        font-size: 30px; 
+       display: none;
     }
 }
 

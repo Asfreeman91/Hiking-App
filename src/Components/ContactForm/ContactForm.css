@@ -16,11 +16,11 @@
     font-size: 20px;
     box-shadow: 2px 2px 3px black;
     text-align: center;
-    margin-bottom: -380px;
+    margin-bottom: -300px;
     color: white;
     position: absolute;
     width: 92%;
-    height: 462.25px;
+    height: 50%;
 }
 
 #contact-button{
@@ -49,13 +49,29 @@
 
 @media (max-height: 844px) {
     #contact-form{
-      margin-bottom: 95px;
-      font-size: 15px;
+     height: 100%; 
+     width: 100%;
+     margin-top: 170px;
+     font-size: 15px;
     }
 }
 
 @media (max-width: 390px) {
     #contact-form{
-       margin-bottom: 95px;
+      height: 100%;
+     width: 100%;
+     font-size: 15px;
+    }
+}
+
+@media (max-height: 844px) {
+    .form-feedback{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 390px) {
+    .form-feedback{
+        font-size: 12px;
     }
 }
