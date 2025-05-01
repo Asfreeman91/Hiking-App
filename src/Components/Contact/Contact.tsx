@@ -11,7 +11,9 @@ export default function Contact() {
         <div id="contact-header-div">
         <h3 id="contact-header">Contact Us With Any Questions!</h3>
         </div>
+        <div id="contact-form-div">
         <ContactForm/> 
+        </div>
         <Footer/>
         </div>
         </div>
